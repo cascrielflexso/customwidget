@@ -21,7 +21,7 @@
         }
 
         fireChanged() {
-            console.log("OnClick Triggered");     
+            alert("u klikte op een custom widget xx cas")   
            
         }        
         
