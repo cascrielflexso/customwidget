@@ -1,18 +1,18 @@
 {
-	"name": "mycustomwidget",
+	"name": "customwidget",
 	"description": "Hello World",
 	"newInstancePrefix": "mycustomwidget",
 	"eula": "",
-	"vendor": "PranavKandpal",
+	"vendor": "cascrielflexso",
 	"license": "",
-	"id": "mycustomwidget",
+	"id": "customwidget",
 	"version": "1.0.1",
 	"icon": "",
 	"webcomponents": [
 		{
 			"kind": "main",
 			"tag": "custom-button",
-			"url": "https://kandpalpranav.github.io/CustomWidget/Webcomponent.js",
+			"url": "https://cascrielflexso.github.io/customwidget/Webcomponent.js",
 			"integrity": ""	,
 			"ignoreIntegrity": true
 			
