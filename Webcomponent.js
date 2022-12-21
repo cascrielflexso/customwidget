@@ -21,7 +21,7 @@
         }
 
         fireChanged() {
-            console.log("u klikte op een custom widget xx cas")   
+            alert("u klikte op een custom widget xx cas")   
            
         }        
         
