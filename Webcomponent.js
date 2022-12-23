@@ -1,10 +1,7 @@
 (function () {
-    const dataBinding = this.dataBindings.getDataBinding('myDataBinding')
     let tmpl = document.createElement('template');
-
-    let member = "hi"//dataBinding.getMembers()[0]
     tmpl.innerHTML = 
-    `<button type="button" id="myBtn">Helper Button ${member}</button>` ;   
+    `<button type="button" id="myBtn">Helper Button</button>` ;   
    
     class PerformanceHelp extends HTMLElement {
         constructor() {
