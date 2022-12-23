@@ -8,9 +8,7 @@
             super();
             this.init();           
         }
-
         init() {            
-              
             let shadowRoot = this.attachShadow({mode: "open"});
             shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this.addEventListener("click", event => {
@@ -21,7 +19,7 @@
         }
 
         fireChanged() {
-            console.log("jej");     
+            console.log("OnClick Triggered");     
            
         }        
         
