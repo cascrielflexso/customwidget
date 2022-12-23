@@ -19,7 +19,8 @@
         }
 
         fireChanged() {
-            console.log("OnClick Triggered");     
+            const dataBinding = this.dataBindings.getDataBinding('myDataBinding')
+            alert(`${dataBinding.getDimensions()[0]}`);     
            
         }        
         
