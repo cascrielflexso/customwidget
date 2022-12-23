@@ -20,7 +20,7 @@
 
         fireChanged() {
             const dataBinding = this.dataBindings.getDataBinding('myDataBinding')
-            alert(`${dataBinding.getDimensions()[0]}`);     
+            alert(`Dimensions : ${dataBinding.getDimensions().toString()}`);     
            
         }        
         
