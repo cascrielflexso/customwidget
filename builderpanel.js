@@ -7,15 +7,15 @@
 				<table>
 					<tr>
 						<td>Color</td>
-						<td><input id="styling_color" type="text" size="40" maxlength="40"></td>
+						<td><input id="builder_color" type="text" size="40" maxlength="40"></td>
 					</tr>
 				</table>
 				<input type="submit" style="display:none;">
 			</fieldset>
 		</form>
 	`;
-
-	class ColoredBoxBuilder Panel extends HTMLElement {
+	
+	class ColoredBoxBuilderPanel extends HTMLElement {
 		constructor() {
 			super();
 			this._shadowRoot = this.attachShadow({mode: "open"});
@@ -43,4 +43,5 @@
 		}
 	}
 
-customElements.define("com-sap-sample-coloredbox-builder", ColoredBoxStylingPanel);
+	customElements.define("builder-custom-panel", ColoredBoxBuilderPanel);
+})();
