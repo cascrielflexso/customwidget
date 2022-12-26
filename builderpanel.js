@@ -34,7 +34,7 @@
 			this.dispatchEvent(new CustomEvent("propertiesChanged", {
 					detail: {
 						properties: {
-							color: this.color
+							prod_number: this.prod_number
 						}
 					}
 			}));
