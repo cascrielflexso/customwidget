@@ -1,4 +1,4 @@
-(function() { 
+(function() { 
 	let template = document.createElement("template");
 	template.innerHTML = `
 		<style>
@@ -12,33 +12,31 @@
 		</style> 
 	`;
 
-	class PerformanceHelp extends HTMLElement {
+	class ColoredBox extends HTMLElement {
 		constructor() {
 			super(); 
 			let shadowRoot = this.attachShadow({mode: "open"});
 			shadowRoot.appendChild(template.content.cloneNode(true));
 			this.addEventListener("click", event => {
 				var event = new Event("onClick");
-                this.fireChanged()
 				this.dispatchEvent(event);
 			});
 			this._props = {};
 		}
-        fireChanged() {
-            //const dataBinding = this.dataBindings.getDataBinding('myDataBinding')
-            //alert(`Dimensions : ${dataBinding.getDimensions('dimensions').toString()}`);     
-           
-        }        
 
 		onCustomWidgetBeforeUpdate(changedProperties) {
 			this._props = { ...this._props, ...changedProperties };
 		}
 
 		onCustomWidgetAfterUpdate(changedProperties) {
-			if ("prod_number" in changedProperties) {
-				this.prod_number = changedProperties["prod_number"];
+			if ("color" in changedProperties) {
+				this.style["background-color"] = changedProperties["color"];
+			}
+			if ("opacity" in changedProperties) {
+				this.style["opacity"] = changedProperties["opacity"];
 			}
 		}
 	}
-	customElements.define("custom-button", PerformanceHelp);
+
+	customElements.define("com-sap-sample-coloredbox", ColoredBox);
 })();
