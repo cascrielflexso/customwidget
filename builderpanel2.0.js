@@ -6,7 +6,7 @@
 				<legend>Colored Box Properties</legend>
 				<table>
 					<tr>
-						<td>Color</td>
+						<td>c</td>
 						<td><input id="builder_color" type="text" size="40" maxlength="40"></td>
 					</tr>
 					<tr>
