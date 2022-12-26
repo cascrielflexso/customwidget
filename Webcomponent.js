@@ -1,8 +1,8 @@
 (function() { 
 	let template = document.createElement("template");
-	const dataBinding = this.myDataBinding
+	const dataBinding = this.dataBindings.getDataBinding('myDataBinding')
 	//let prd = dataBinding.data["Product"][this.prod_number]
-	console.log(dataBinding.data.toString())
+	console.log(dataBinding.getMembers("Product").toString())
 	template.innerHTML = `
 		<style>
 		:host {
