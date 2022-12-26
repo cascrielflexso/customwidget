@@ -46,6 +46,7 @@
 		get color() {
 			return this._shadowRoot.getElementById("builder_color").value;
 		}
+	
 		
 		set prod_number(newProd_number) {
 			this._shadowRoot.getElementById("builder_product").value = newProd_number;
