@@ -31,21 +31,21 @@
 
 		_submit(e) {
 			e.preventDefault();
-			this.dispatchEvent(new CustomEvent("propertiesChanged", {
+			/*this.dispatchEvent(new CustomEvent("propertiesChanged", {
 					detail: {
 						properties: {
 							prod_number: this.prod_number
 						}
 					}
-			}));
+			}));*/
 		}
 
 		set prod_number(newProd_number) {
-			this._shadowRoot.getElementById("builder_prod_number").value = newProd_number;
+			//this._shadowRoot.getElementById("builder_prod_number").value = newProd_number;
 		}
 
 		get opacity() {
-			return this._shadowRoot.getElementById("builder_prod_number").value;
+			//return this._shadowRoot.getElementById("builder_prod_number").value;
 		}
 	}
 
