@@ -8,6 +8,7 @@
 					<tr>
 						<td>Color</td>
 						<td><input id="styling_color" type="text" size="40" maxlength="40"></td>
+						<td><input id="styling_prd" type="text" size="40" maxlength="40"></td>
 					</tr>
 				</table>
 				<input type="submit" style="display:none;">
@@ -32,6 +33,13 @@
 						}
 					}
 			}));
+			this.dispatchEvent(new CustomEvent("propertiesChanged", {
+					detail: {
+						properties: {
+							prod_number: this.prod_number
+						}
+					}
+			}));
 		}
 
 		set color(newColor) {
@@ -40,6 +48,13 @@
 
 		get color() {
 			return this._shadowRoot.getElementById("styling_color").value;
+		}
+		set prod_number(newProd_number) {
+			this._shadowRoot.getElementById("styling_prd").value = newProd_number;
+		}
+
+		get prod_number() {
+			return this._shadowRoot.getElementById("styling_prd").value;
 		}
 	}
 
