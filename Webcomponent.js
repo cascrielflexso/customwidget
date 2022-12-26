@@ -1,6 +1,6 @@
 (function() { 
 	let template = document.createElement("template");
-	const dataBinding = this.dataBindings.getDataBinding('myDataBinding')
+	const dataBinding = this.dataBindings.myDataBinding
 	//let prd = dataBinding.data["Product"][this.prod_number]
 	console.log(dataBinding.data.toString())
 	template.innerHTML = `
