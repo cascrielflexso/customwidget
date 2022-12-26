@@ -3,11 +3,11 @@
 	template.innerHTML = `
 		<form id="form">
 			<fieldset>
-				<legend>Properties</legend>
+				<legend>Colored Box Properties</legend>
 				<table>
 					<tr>
-						<td>Product Number</td>
-						<td><input id="builder_prod_number" type="text" size="15" maxlength="10"></td>
+						<td>Opacity</td>
+						<td><input id="builder_opacity" type="text" size="5" maxlength="5"></td>
 					</tr>
 				</table>
 				<input type="submit" style="display:none;">
@@ -21,7 +21,7 @@
 		</style>
 	`;
 
-	class BoxBps extends HTMLElement {
+	class ColoredBoxBuilderPanel extends HTMLElement {
 		constructor() {
 			super();
 			this._shadowRoot = this.attachShadow({mode: "open"});
@@ -34,20 +34,20 @@
 			this.dispatchEvent(new CustomEvent("propertiesChanged", {
 					detail: {
 						properties: {
-							prod_number: this.prod_number
+							opacity: this.opacity
 						}
 					}
 			}));
 		}
 
-		set prod_number(new_prod_number) {
-			this._shadowRoot.getElementById("builder_prod_number").value = new_prod_number;
+		set opacity(newOpacity) {
+			this._shadowRoot.getElementById("builder_opacity").value = newOpacity;
 		}
 
-		get prod_number() {
-			return this._shadowRoot.getElementById("builder_prod_number").value;
+		get opacity() {
+			return this._shadowRoot.getElementById("builder_opacity").value;
 		}
-	}*/
+	}
 
-	customElements.define("bps-custom-element", BoxBps);
+	customElements.define("com-sap-sample-coloredbox-builder", ColoredBoxBuilderPanel);
 })();
