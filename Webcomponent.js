@@ -2,7 +2,7 @@
     let tmpl = document.createElement('template');
     tmpl.innerHTML = 
     `<div class="card">
-        <img src="shelf.jpeg" alt="Avatar" style="width:100%">
+        <img src="https://cascrielflexso.github.io/customwidget/shelf.jpeg" alt="Avatar" style="width:100%">
             <div class="container">
         <h4><b>Shelf type N354</b></h4>
        <p>ART nr. 2545852656845</p>
