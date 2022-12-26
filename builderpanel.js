@@ -7,7 +7,7 @@
 				<table>
 					<tr>
 						<td>Opacity</td>
-						<td><input id="builder_opacity" type="text" size="5" maxlength="5"></td>
+						<td><input id="builder_prod_number" type="text" size="5" maxlength="5"></td>
 					</tr>
 				</table>
 				<input type="submit" style="display:none;">
@@ -34,20 +34,20 @@
 			this.dispatchEvent(new CustomEvent("propertiesChanged", {
 					detail: {
 						properties: {
-							opacity: this.opacity
+							prod_number: this.prod_number
 						}
 					}
 			}));
 		}
 
-		set opacity(newOpacity) {
-			this._shadowRoot.getElementById("builder_opacity").value = newOpacity;
+		set prod_number(newProd_number) {
+			this._shadowRoot.getElementById("builder_prod_number").value = newProd_number;
 		}
 
 		get opacity() {
-			return this._shadowRoot.getElementById("builder_opacity").value;
+			return this._shadowRoot.getElementById("builder_prod_number").value;
 		}
 	}
 
-	customElements.define("com-sap-sample-coloredbox-builder", ColoredBoxBuilderPanel);
+	customElements.define("builder-custom-panel", ColoredBoxBuilderPanel);
 })();
