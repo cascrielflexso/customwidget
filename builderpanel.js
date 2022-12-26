@@ -50,7 +50,8 @@
 			this.dispatchEvent(new CustomEvent("propertiesChanged", {
 					detail: {
 						properties: {
-							color: this.color
+							color: this.color,
+							prod_number: this.prod_number
 						}
 					}
 			}));
@@ -62,6 +63,14 @@
 
 		get color() {
 			return this._shadowRoot.getElementById("builder_color").value;
+		}
+		
+		set prod_number(newProd_number) {
+			this._shadowRoot.getElementById("products").options[this._shadowRoot.getElementById("products").selectedIndex].text = newProd_number;
+		}
+
+		get prod_number() {
+			return this._shadowRoot.getElementById("products").value;
 		}
 	}
 
