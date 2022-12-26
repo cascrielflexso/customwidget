@@ -3,7 +3,7 @@
     tmpl.innerHTML = 
     `<style>
     .card {
-  /* Add shadows to create the "card" effect */
+  display : none;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
 }
@@ -12,13 +12,22 @@
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
+.buttonElement:hover .card{
+    display:block;
+}
+.buttonElement{
+    background-color: #74992e;
+    border-radius: 25px;
+}
 
 /* Add some padding inside the card container */
 .container {
   padding: 2px 16px;
 }
-     </style>
-    
+  </style>
+    <div class="buttonElement">
+        Shelf type N354
+    </div>
     <div class="card">
         <img src="https://cascrielflexso.github.io/customwidget.github.io/shelf.jpeg" alt="Avatar" style="width:100%">
             <div class="container">
