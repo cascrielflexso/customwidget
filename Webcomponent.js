@@ -25,8 +25,8 @@
 			this._props = {};
 		}
         fireChanged() {
-            const dataBinding = this.dataBindings.getDataBinding('myDataBinding')
-            alert(`Dimensions : ${dataBinding.getDimensions('dimensions').toString()}`);     
+            //const dataBinding = this.dataBindings.getDataBinding('myDataBinding')
+            //alert(`Dimensions : ${dataBinding.getDimensions('dimensions').toString()}`);     
            
         }        
 
