@@ -9,10 +9,6 @@
 						<td>Color</td>
 						<td><input id="builder_color" type="text" size="40" maxlength="40"></td>
 					</tr>
-					<tr>
-						<td>Number</td>
-						<td><input id="builder_number" type="text" size="40" maxlength="40"></td>
-					</tr>
 				</table>
 				<input type="submit" style="display:none;">
 			</fieldset>
