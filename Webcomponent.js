@@ -12,23 +12,17 @@
 		</style> 
 	`;
 
-	class PerformanceHelp extends HTMLElement {
+	class ColoredBox extends HTMLElement {
 		constructor() {
-			super(); 
-			let shadowRoot = this.attachShadow({mode: "open"});
-			shadowRoot.appendChild(template.content.cloneNode(true));
-			this.addEventListener("click", event => {
-				var event = new Event("onClick");
-                this.fireChanged()
-				this.dispatchEvent(event);
-			});
+		super(); 
+		let shadowRoot = this.attachShadow({mode: "open"});
+		shadowRoot.appendChild(template.content.cloneNode(true));
+		this.addEventListener("click", event => {
+			var event = new Event("onClick");
+			this.dispatchEvent(event);
+		});
 			this._props = {};
 		}
-        fireChanged() {
-            //const dataBinding = this.dataBindings.getDataBinding('myDataBinding')
-            //alert(`Dimensions : ${dataBinding.getDimensions('dimensions').toString()}`);     
-           
-        }        
 
 		onCustomWidgetBeforeUpdate(changedProperties) {
 			this._props = { ...this._props, ...changedProperties };
@@ -40,5 +34,5 @@
 			}
 		}
 	}
-	customElements.define("custom-button", PerformanceHelp);
+	customElements.define("custom-button", ColoredBox);
 })();
