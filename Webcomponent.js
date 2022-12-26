@@ -2,7 +2,7 @@
 	let template = document.createElement("template");
 	const dataBinding = this.dataBindings.getDataBinding('myDataBinding')
 	//let prd = dataBinding.data["Product"][this.prod_number]
-	console.log(dataBinding.getMembers("Product").toString())
+	console.log(dataBinding.getMembers("dimensions").toString())
 	template.innerHTML = `
 		<style>
 		:host {
