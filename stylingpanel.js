@@ -8,6 +8,10 @@
 					<tr>
 						<td>Color</td>
 						<td><input id="styling_color" type="text" size="40" maxlength="40"></td>
+						
+					</tr>
+					<tr>
+						<td>Product</td>
 						<td><input id="styling_prd" type="text" size="40" maxlength="40"></td>
 					</tr>
 				</table>
