@@ -1,5 +1,7 @@
 (function() { 
 	let template = document.createElement("template");
+	const dataBinding = this.dataBindings.getDataBinding('myDataBinding')
+	let prd = dataBinding.data["Product"][this.prod_number]
 	template.innerHTML = `
 		<style>
 		:host {
@@ -9,7 +11,8 @@
 			border-style: solid;
 			display: block;
 		} 
-		</style> 
+		</style>
+		<p>${prd}
 	`;
 
 	class ColoredBox extends HTMLElement {
@@ -17,6 +20,7 @@
 			super(); 
 			let shadowRoot = this.attachShadow({mode: "open"});
 			shadowRoot.appendChild(template.content.cloneNode(true));
+			
 			this.addEventListener("click", event => {
 				var event = new Event("onClick");
 				this.dispatchEvent(event);
