@@ -49,5 +49,5 @@
 		}
 	}
 
-	customElements.define("bps", BoxBps);
+	customElements.define("bps-custom-element", BoxBps);
 })();
