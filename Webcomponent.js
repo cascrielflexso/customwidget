@@ -1,7 +1,8 @@
 (function() { 
 	let template = document.createElement("template");
 	const dataBinding = this.dataBindings.getDataBinding('myDataBinding')
-	let prd = dataBinding.data["Product"][this.prod_number]
+	//let prd = dataBinding.data["Product"][this.prod_number]
+	console.log(dataBinding.data.toString())
 	template.innerHTML = `
 		<style>
 		:host {
@@ -12,7 +13,6 @@
 			display: block;
 		} 
 		</style>
-		<p>${prd}
 	`;
 
 	class ColoredBox extends HTMLElement {
