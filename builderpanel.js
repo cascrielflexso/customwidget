@@ -22,7 +22,7 @@
 	`;
 
 	class BoxBps extends HTMLElement {
-		constructor() {
+		/*constructor() {
 			super();
 			this._shadowRoot = this.attachShadow({mode: "open"});
 			this._shadowRoot.appendChild(template.content.cloneNode(true));
@@ -47,7 +47,7 @@
 		get prod_number() {
 			return this._shadowRoot.getElementById("prod_number").value;
 		}
-	}
+	}*/
 
 	customElements.define("bps-custom-element", BoxBps);
 })();
