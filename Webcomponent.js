@@ -21,9 +21,8 @@
 			var event = new Event("onClick");
 			this.dispatchEvent(event);
 		});
-		this._props = {};
+			this._props = {};
 		}
-		
 
 		onCustomWidgetBeforeUpdate(changedProperties) {
 			this._props = { ...this._props, ...changedProperties };
