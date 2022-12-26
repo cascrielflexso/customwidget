@@ -1,25 +1,6 @@
 (function()  {
 	let template = document.createElement("template");
-	template.innerHTML = `
-		<form id="form">
-			<fieldset>
-				<legend>Insert Product Number</legend>
-				<table>
-					<tr>
-						<td>Product Number</td>
-						<td><input id="prod_number" type="text" size="15" maxlength="15"></td>
-					</tr>
-				</table>
-				<input type="submit" style="display:none;">
-			</fieldset>
-		</form>
-		<style>
-		:host {
-			display: block;
-			padding: 1em 1em 1em 1em;
-		}
-		</style>
-	`;
+	template.innerHTML = `<p>hello</p>`;
 
 	class BoxBps extends HTMLElement {
 		/*constructor() {
