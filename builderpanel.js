@@ -26,26 +26,26 @@
 			super();
 			this._shadowRoot = this.attachShadow({mode: "open"});
 			this._shadowRoot.appendChild(template.content.cloneNode(true));
-			this._shadowRoot.getElementById("form").addEventListener("submit", this._submit.bind(this));
+			//this._shadowRoot.getElementById("form").addEventListener("submit", this._submit.bind(this));
 		}
 
 		_submit(e) {
 			e.preventDefault();
-			/*this.dispatchEvent(new CustomEvent("propertiesChanged", {
+			this.dispatchEvent(new CustomEvent("propertiesChanged", {
 					detail: {
 						properties: {
 							prod_number: this.prod_number
 						}
 					}
-			}));*/
+			}));
 		}
 
 		set prod_number(newProd_number) {
-			//this._shadowRoot.getElementById("builder_prod_number").value = newProd_number;
+			this._shadowRoot.getElementById("builder_prod_number").value = newProd_number;
 		}
 
-		get opacity() {
-			//return this._shadowRoot.getElementById("builder_prod_number").value;
+		get prod_number() {
+			return this._shadowRoot.getElementById("builder_prod_number").value;
 		}
 	}
 
