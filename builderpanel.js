@@ -9,6 +9,10 @@
 						<td>Color</td>
 						<td><input id="builder_color" type="text" size="40" maxlength="40"></td>
 					</tr>
+					<tr>
+						<td>Number</td>
+						<td><input id="builder_number" type="text" size="40" maxlength="40"></td>
+					</tr>
 				</table>
 				<input type="submit" style="display:none;">
 			</fieldset>
@@ -28,7 +32,8 @@
 			this.dispatchEvent(new CustomEvent("propertiesChanged", {
 					detail: {
 						properties: {
-							color: this.color
+							color: this.color,
+							prod_number = this.prod_number
 						}
 					}
 			}));
@@ -40,6 +45,13 @@
 
 		get color() {
 			return this._shadowRoot.getElementById("builder_color").value;
+		}
+		set prod_number(newProd_number) {
+			this._shadowRoot.getElementById("builder_number").value = newProd_number;
+		}
+
+		get prod_number() {
+			return this._shadowRoot.getElementById("builder_number").value;
 		}
 	}
 
