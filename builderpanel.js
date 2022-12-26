@@ -6,27 +6,21 @@
 				<legend>Colored Box Properties</legend>
 				<table>
 					<tr>
-						<td>Opacity</td>
-						<td><input id="builder_prod_number" type="text" size="5" maxlength="5"></td>
+						<td>Color</td>
+						<td><input id="builder_color" type="text" size="40" maxlength="40"></td>
 					</tr>
 				</table>
 				<input type="submit" style="display:none;">
 			</fieldset>
 		</form>
-		<style>
-		:host {
-			display: block;
-			padding: 1em 1em 1em 1em;
-		}
-		</style>
 	`;
-
+	
 	class ColoredBoxBuilderPanel extends HTMLElement {
 		constructor() {
 			super();
 			this._shadowRoot = this.attachShadow({mode: "open"});
 			this._shadowRoot.appendChild(template.content.cloneNode(true));
-			//this._shadowRoot.getElementById("form").addEventListener("submit", this._submit.bind(this));
+			this._shadowRoot.getElementById("form").addEventListener("submit", this._submit.bind(this));
 		}
 
 		_submit(e) {
@@ -34,18 +28,18 @@
 			this.dispatchEvent(new CustomEvent("propertiesChanged", {
 					detail: {
 						properties: {
-							prod_number: this.prod_number
+							color: this.color
 						}
 					}
 			}));
 		}
 
-		set prod_number(newProd_number) {
-			this._shadowRoot.getElementById("builder_prod_number").value = newProd_number;
+		set color(newColor) {
+			this._shadowRoot.getElementById("builder_color").value = newColor;
 		}
 
-		get prod_number() {
-			return this._shadowRoot.getElementById("builder_prod_number").value;
+		get color() {
+			return this._shadowRoot.getElementById("builder_color").value;
 		}
 	}
 
