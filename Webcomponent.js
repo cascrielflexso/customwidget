@@ -29,9 +29,12 @@
 		}
 
 		onCustomWidgetAfterUpdate(changedProperties) {
-			if ("prod_number" in changedProperties) {
-				this.prod_number = changedProperties["prod_number"];
+			if ("color" in changedProperties) {
+				this.style["background-color"] = changedProperties["color"];
 			}
+			/*if ("prod_number" in changedProperties) {
+				this.prod_number = changedProperties["prod_number"];
+			}*/
 		}
 	}
 	customElements.define("custom-button", ColoredBox);
