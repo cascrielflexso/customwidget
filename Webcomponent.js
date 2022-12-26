@@ -1,6 +1,5 @@
 (function () {
     let tmpl = document.createElement('template');
-    const dataBinding = this.dataBindings.getDataBinding('myDataBinding');
     tmpl.innerHTML = 
     `<style>
     .card {
