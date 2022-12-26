@@ -22,8 +22,6 @@
 			this.dispatchEvent(event);
 		});
 		this._props = {};
-		const dataBinding = this.dataBindings.getDataBinding('myDataBinding')
-		this.dataBinding.setModel("C9g5v39s7b6sr41g42u8jafd12q")
 		}
 		
 
