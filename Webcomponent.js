@@ -1,8 +1,5 @@
 (function() { 
-	let template = document.createElement("template");
-	const dataBinding = this.dataBindings.getDataBinding('myDataBinding')
-	//let prd = dataBinding.data["Product"][this.prod_number]
-	console.log(dataBinding.getMembers("dimensions").toString())
+	let template = document.createElement("template")
 	template.innerHTML = `
 		<style>
 		:host {
@@ -26,6 +23,9 @@
 				this.dispatchEvent(event);
 			});
 			this._props = {};
+			const dataBinding = this.dataBindings.getDataBinding('myDataBinding')
+			//let prd = dataBinding.data["Product"][this.prod_number]
+			console.log(dataBinding.getMembers("dimensions").toString())
 		}
 
 		onCustomWidgetBeforeUpdate(changedProperties) {
