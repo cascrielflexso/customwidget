@@ -23,7 +23,7 @@
 				this.dispatchEvent(event);
 			});
 			this._props = {};
-			const dataBinding = this.dataBindings.getDataBinding('myDataBinding')
+			const dataBinding = this.dataBindings.getDataBinding()
 			//let prd = dataBinding.data["Product"][this.prod_number]
 			console.log(dataBinding.getMembers("dimensions").toString())
 		}
