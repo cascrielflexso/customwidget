@@ -24,7 +24,7 @@
 			});
 			this._props = {};
 			//let prd = dataBinding.data["Product"][this.prod_number]
-			console.log(this.dataBindings.toString())
+			console.log(this.myDataBinding)
 		}
 
 		onCustomWidgetBeforeUpdate(changedProperties) {
